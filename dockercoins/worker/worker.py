@@ -26,8 +26,7 @@ def hash_bytes(data):
     r = requests.post("http://hasher/",
                       data=data,
                       headers={"Content-Type": "application/octet-stream"})
-    hex_hash = r.text
-    return hex_hash
+    return r.text
 
 
 def work_loop(interval=1):
